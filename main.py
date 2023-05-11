@@ -2,11 +2,14 @@ import asyncio as aio
 from init import main_config, log
 from aiogram import Bot, Dispatcher, Router
 from aiogram.types import Message
-
+from posters import *
 
     # Load config
 async def main():
     main_conf = main_config()
+
+
+async def tg():
     # Start Telegram bot
     log().debug('Starting Telegram bot')
     token = main_config()['TG_BOT']['token']
@@ -26,4 +29,4 @@ async def main():
 if __name__ == '__main__':
     log().info('Script started')
     aio.run(main())
-    aio.run(tg_())
+    aio.run(tg())
