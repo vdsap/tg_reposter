@@ -1,11 +1,11 @@
 import asyncio as aio
-from init import main_config, log
+from init import log
 from tg import tg_bot
 
 
-async def main():   # Load config
-    main_conf = main_config()
-    await tg_bot()
+#
+async def main():
+    await tg_bot()  # start main loop
 
 
 if __name__ == '__main__':
